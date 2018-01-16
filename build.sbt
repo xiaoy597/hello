@@ -19,5 +19,5 @@ makeVersionProperties := {
 
 resourceGenerators in Compile += makeVersionProperties
 
-lazy val common : Seq[Def.Setting[_]] =
-  Project("common", file("common")).settings
+lazy val common =
+  Project(id = "common", base = file("common")).settings()
